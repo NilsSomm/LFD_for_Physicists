@@ -8,9 +8,14 @@ parts:
   numbered: 2
   chapters:
   - title: "Invitation to inductive inference"
-    file: LearningFromData-content/Intro/Overview.md
+    file: LearningFromData-content/Intro/Invitation.md
+  #- file: LearningFromData-content/Intro/Introduction.md
   - file: LearningFromData-content/Intro/Introduction.md
-#  - file: LearningFromData-content/Intro/Acknowledgments.md
+    sections:
+      - file: LearningFromData-content/Intro/Introduction/sec-01-physicist-s-perspective.md
+      - file: LearningFromData-content/Intro/Introduction/sec-02-bayesian-workflow.md
+      - file: LearningFromData-content/Intro/Introduction/sec-03-machine-learning.md
+      - file: LearningFromData-content/Intro/Introduction/sec-04-virtues.md
 
 
 ####### Part I: Bayesian basics ################################################################
@@ -22,15 +27,14 @@ parts:
 
   - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Inferenceandpdfs.md
     sections:
-    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/exercise_sum_product_rule.md
-    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/exercise_medical_example_by_Bayes.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Inferenceandpdfs/sec-01-statements.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Inferenceandpdfs/sec-02-manipulating-probabilities-bayesian-rules-of-probability-as.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Inferenceandpdfs/sec-03-probability-density-functions.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Inferenceandpdfs/sec-04-summary.md
     - file: LearningFromData-content/BayesianStatistics/BayesianBasics/MoreBayesTheorem.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/DataModelsPredictions.md
     - title: "*Aside: Bayesian epistemology"
       file: LearningFromData-content/BayesianStatistics/BayesianBasics/Bayesian_epistemology.md
-    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/DataModelsPredictions.md
-      sections:
-      - title: "📥 Parameter estimation I: Gaussian mean and variance"
-        file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_Gaussian_noise.ipynb
 
 
   - title: "Bayesian posteriors"
@@ -40,6 +44,7 @@ parts:
       sections:
       - title: "Follow-ups to Exploring PDFs"
         file: LearningFromData-content/BayesianStatistics/BayesianBasics/Exploring_pdfs_followups.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Visualizing_correlated_gaussians.ipynb
     - file: LearningFromData-content/BayesianStatistics/BayesianBasics/Gaussians.md
       sections:
       - file: LearningFromData-content/BayesianStatistics/BayesianBasics/visualization_of_CLT.ipynb
@@ -66,6 +71,26 @@ parts:
     - file: LearningFromData-content/BayesianStatistics/BayesianWorkflow/BayesianWorkflow.md
     - file: LearningFromData-content/BayesianStatistics/BayesianLinearRegression/BayesianLinearRegression_rjf.md
 
+  - title: "Error propagation"
+    file: LearningFromData-content/BayesianStatistics/BayesianBasics/ErrorPropagation.md
+    sections:
+      - file: LearningFromData-content/BayesianStatistics/BayesianBasics/ErrorPropagation/sec-01-error-propagation-i-nuisance-parameters-and-marginalization.md
+      - file: LearningFromData-content/BayesianStatistics/BayesianBasics/ErrorPropagation/sec-02-error-propagation-ii-changing-variables.md
+      - file: LearningFromData-content/BayesianStatistics/BayesianBasics/ErrorPropagation/sec-03-error-propagation-iii-a-useful-approximation.md
+      - file: LearningFromData-content/BayesianStatistics/BayesianBasics/ErrorPropagation/sec-04-solutions.md
+
+  - title: "Exercises for Part I"
+    file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/Exercises_parameter_estimation.md
+    sections:
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/exercise_sum_product_rule.md
+    - file: LearningFromData-content/BayesianStatistics/BayesianBasics/exercise_medical_example_by_Bayes.md
+    - title: "📥 Parameter estimation I: Gaussian mean and variance"
+      file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_Gaussian_noise.ipynb
+    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/radioactive_lighthouse_exercise.ipynb
+    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/amplitude_in_presence_of_background.ipynb
+    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_fitting_straight_line_I.ipynb
+    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_fitting_straight_line_II.ipynb
+
 
 ####### Part II: Advanced Bayesian methods ################################################
 - caption: "Part II: Advanced Bayesian methods"
@@ -74,14 +99,14 @@ parts:
   - title: "Overview of Part II"
     file: LearningFromData-content/BayesianStatistics/RootAdvancedMethods.md
 
-  - title: "More Bayesian parameter estimation"
-    file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/ParameterEstimation.md
+  - title: "Discrepancy Models"
+    file: LearningFromData-content/OtherTopics/DiscrepancyModels.md
     sections:
-    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/radioactive_lighthouse_exercise.ipynb
-    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/amplitude_in_presence_of_background.ipynb
-    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_fitting_straight_line_I.ipynb
-    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/parameter_estimation_fitting_straight_line_II.ipynb
-    - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/dealing_with_outliers.ipynb
+    - file: LearningFromData-content/OtherTopics/DiscrepancyModels/sec-01-koh-and-boh-discrepancy-models.md
+    - file: LearningFromData-content/OtherTopics/DiscrepancyModels/sec-02-framework.md
+    - file: LearningFromData-content/OtherTopics/DiscrepancyModels/sec-03-the-ball-drop-model.md
+    - title: "📥 Ball-drop experiment notebook"
+      file: LearningFromData-content/OtherTopics/MD_balldrop_v1.ipynb
 
 
   - title: "Assigning probabilities"
@@ -93,6 +118,8 @@ parts:
         file: LearningFromData-content/BayesianStatistics/AssigningProbabilities/demo-straight_lines.ipynb
     - file: LearningFromData-content/BayesianStatistics/AssigningProbabilities/MaxEnt2.md
     - file: LearningFromData-content/BayesianStatistics/AssigningProbabilities/MaxEnt_Function_Reconstruction.ipynb
+
+  - file: LearningFromData-content/BayesianStatistics/BayesianParameterEstimation/dealing_with_outliers.ipynb
 
   - file: LearningFromData-content/BayesianStatistics/ComputationalBayes/BayesLinear.md
 
@@ -113,11 +140,6 @@ parts:
     - title: "Model averaging and mixing "
       file: LearningFromData-content/BayesianStatistics/ModelMixing/model_mixing.md
 
-  - title: "Discrepancy Models"
-    file: LearningFromData-content/OtherTopics/DiscrepancyModels.md
-    sections:
-    - title: "📥 Ball-drop experiment"
-      file: LearningFromData-content/OtherTopics/MD_balldrop_v1.ipynb
 
 
 ####### MCMC sampling ################################################################
@@ -293,8 +315,26 @@ parts:
   - title: "Overview of scientific modeling material"
     file: LearningFromData-content/ModelingOptimization/RootScientificModeling.md
   - file: LearningFromData-content/ModelingOptimization/OverviewModeling.md
+    sections:
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-01-notation.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-02-models-in-science.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-03-parametric-versus-non-parametric-models.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-04-linear-versus-non-linear-models.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-05-regression-analysis-optimization-versus-inference.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-06-exercises.md
+    - file: LearningFromData-content/ModelingOptimization/OverviewModeling/sec-07-solutions.md
   - file: LearningFromData-content/ModelingOptimization/LinearModels.md
+    sections:
+    - file: LearningFromData-content/ModelingOptimization/LinearModels/sec-01-definition-of-linear-models.md
+    - file: LearningFromData-content/ModelingOptimization/LinearModels/sec-02-regression-analysis-with-linear-models.md
+    - file: LearningFromData-content/ModelingOptimization/LinearModels/sec-03-ordinary-linear-regression-warmup.md
+    - file: LearningFromData-content/ModelingOptimization/LinearModels/sec-04-ordinary-linear-regression-in-practice.md
+    - file: LearningFromData-content/ModelingOptimization/LinearModels/sec-05-solutions.md
   - file: LearningFromData-content/ModelingOptimization/MathematicalOptimization.md
+    sections:
+    - file: LearningFromData-content/ModelingOptimization/MathematicalOptimization/sec-01-gradient-descent-optimization.md
+    - file: LearningFromData-content/ModelingOptimization/MathematicalOptimization/sec-02-batch-stochastic-and-mini-batch-gradient-descent.md
+    - file: LearningFromData-content/ModelingOptimization/MathematicalOptimization/sec-03-adaptive-gradient-descent-algorithms.md
 
 
 - caption: "Appendix C: Getting started"
